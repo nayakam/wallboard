@@ -1,0 +1,115 @@
+{
+  "title": "My first dashboard Demo",
+  "titleVisible": false,
+
+  "description": "DEMO",
+
+  "layout": {
+    "customJS" : ["jquery.peity.js"],
+    "gridSize" : { "columns" : 15, "rows" : 11 },
+    "widgets" : [
+      {"row" : 1, "col" : 1, "width" : 5,   "height" : 3, "widget" : "currentCall",  "job" : "currentCall",        "config": "currentCall"},
+      {"row" : 1, "col" : 6, "width" : 10,  "height" : 4, "widget" : "linegraph",    "job" : "sales-graph",        "config": "sales"},
+      {"row" : 4, "col" : 1, "width" : 5,   "height" : 3, "widget" : "totalCall",    "job" : "totalCall",          "config": "totalCall"},
+      {"row" : 8, "col" : 1, "width" : 5,   "height" : 3, "widget" : "serviceLevel", "job" : "serviceLevel",       "config": "serviceLevel"},
+      {"row" : 5, "col" : 6, "width" : 10,  "height" : 5, "widget" : "linegraph",    "job" : "sales-graph",        "config": "sales"},
+      {"row" : 9, "col" : 1, "width" : 12,  "height" : 5, "widget" : "quotes",       "job" : "quotes",             "config": "quotes-famous"},
+      {"row" : 9, "col" : 13, "width" :3,   "height" : 5, "widget" : "datetime",     "job" : "datetime",           "config": "datetime"}
+    ]
+  },
+
+  "config" : {
+
+    "calendar-holidays": {
+      "interval": 60000,
+      "calendarUrl": "http://www.calendarlabs.com/templates/ical/Australia-Holidays.ics",
+      "maxEntries": 9,
+      "widgetTitle": "Upcoming US Holidays"
+    },
+
+    "issue-types": {
+      "interval": 60000,
+      "widgetTitle": "Issues Types in the Project",
+      "database": {
+        "host": "mydatabase.mycompany.com",
+        "port": 1000,
+        "database": "salesdb"
+      }
+    },
+
+    "picture": {
+      "interval": 60000,
+      "widgetTitle": "Nat Geo Picture of the Day",
+      "url": "http://photography.nationalgeographic.com/photography/photo-of-the-day"
+    },
+
+    "currentCall": {
+      "interval": 3000,
+      "widgetTitle": "Current Call Details"
+    },
+
+    "totalCall": {
+      "interval": 3000,
+      "widgetTitle": "Total Call Details"
+    },
+
+    "serviceLevel": {
+      "interval": 3000,
+      "widgetTitle": "Service Level Details"
+    },
+
+    "quotes-famous": {
+      "interval": 6000,
+      "widgetTitle": "Message From Team Manager",
+      "quotes": [
+        {
+          "quote": "It's not that I'm so smart, it's just that I stay with problems longer.",
+          "author": "Albert Einstein"
+        },
+        {
+          "quote": "Ignorance is the curse of God; knowledge is the wing wherewith we fly to heaven.",
+          "author": "William Shakespeare"
+        },
+        {
+          "quote": "Software built on pride and love of subject is superior to software built for profit.",
+          "author": "Ravi Simhambhatla"
+        },
+        {
+          "quote": "If developers’ pains are Java and .NET, the antidote is dynamic languages and frameworks.",
+          "author": "Jeffrey Hammond"
+        },
+        {
+          "quote": "Software is like sex: it's better when it's free.",
+          "author": "Linus Torvalds"
+        },
+        {
+          "quote": "People enjoy the interaction on the Internet, and the feeling of belonging to a group that does something interesting: that's how some software projects are born.",
+          "author": "Linus Torvalds"
+        },
+        {
+          "quote": "The ultimate search engine would basically understand everything in the world, and it would always give you the right thing.",
+          "author": "Larry Page"
+        },
+        {
+          "quote": "Mathematics is the queen of the sciences and number theory is the queen of mathematics.",
+          "author": "Carl Friedrich Gauss"
+        },
+        {
+          "quote": "Computer science is no more about computers than astronomy is about telescopes.",
+          "author": "Edsger Dijkstra"
+        }
+      ],
+      "limit": 1
+    },
+
+    "sales": {
+      "interval": 6000,
+      "widgetTitle": "Monthly Sales"
+    },
+
+    "datetime": {
+      "interval": 1000,
+      "lang": "en"
+    }
+  }
+}
