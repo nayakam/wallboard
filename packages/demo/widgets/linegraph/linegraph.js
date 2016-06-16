@@ -9,10 +9,10 @@ widget = {
     // Display sparkline of month-by-month new sales
     $('.left', el).append($('.graph', el).html(data.linegraph.join(",")));
     $('.graph', el).peity("line", {
-      width: 900,
+      width: 1000,
       height: 300,
       strokeColour: '#1796d1',
-      strokeWidth: 3
+      strokeWidth: 20
     });
 
     // Work out percentage (Current month/previous month *100) -100 to get the percent difference to previous month.

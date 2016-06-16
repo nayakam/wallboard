@@ -1,3 +1,3 @@
 module.exports = {
-  "authenticationFilePath": "globalAuth.json"
+    "authenticationFilePath": "globalAuth.json"
 };

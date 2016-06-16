@@ -11,6 +11,6 @@ module.exports = {
   onRun: function (config, dependencies, jobCallback) {
     //To generate a line graph, simply create an array of numbers and send it through to the linegraph widget
     var salesData = getSalesData(15);
-    jobCallback(null, {linegraph: salesData, title: config.widgetTitle, dataDisplay: "soldThisMonth"});
+    jobCallback(null, {linegraph: salesData, title: config.widgetTitle, dataDisplay: config.dataDisplay});
   }
 };

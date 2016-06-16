@@ -1,23 +1,22 @@
 module.exports = {
 
-  "liveLoggingWebAccess": false, // disabled by default for security reasons
+    "liveLoggingWebAccess": false, // disabled by default for security reasons
 
-  "morgan": 'dev', // settings for express's logging: https://www.npmjs.com/package/morgan
+    "morgan": 'dev', // settings for express's logging: https://www.npmjs.com/package/morgan
 
-  /**
-   * https://www.npmjs.com/package/tracer
-   */
+    /**
+     * https://www.npmjs.com/package/tracer
+     */
 
-  "logger": {
+    "logger": {
 
-    "format": [
-      "{{timestamp}} <{{title}}> {{message}} ({{file}})",
-      {
-        // error template
-        "error": "{{timestamp}} <{{title}}> {{message}} (in {{file}}:{{line}})\nCall Stack:\n{{stack}}"
-      }
-    ],
-    "dateformat": "HH:MM:ss.L",
-    "level": 3
-  }
+        "format": [
+            "{{timestamp}} <{{title}}> {{message}} ({{file}})", {
+                // error template
+                "error": "{{timestamp}} <{{title}}> {{message}} (in {{file}}:{{line}})\nCall Stack:\n{{stack}}"
+            }
+        ],
+        "dateformat": "HH:MM:ss.L",
+        "level": 3
+    }
 };
