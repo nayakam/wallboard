@@ -87,14 +87,46 @@ module.exports = {
 
          */
 
-        dependencies.easyRequest.HTML('http://google.com', function(err, html) {
-            logger.info("err:" + err);
-            logger.info("html:" + html);
-            //jobCallback(err, {title: config.widgetTitle, html: html});
-            jobCallback(err, {
-                title: config.widgetTitle,
-                serviceLevel: '82'
-            });
+        status = {
+            "queue": [{
+                "abandonedcalls": -1,
+                "callswaiting": -1,
+                "dequeuedcalls": -1,
+                "id": 2,
+                "oldestwait": "0:00:00",
+                "qname": "Main_CSQ",
+                "totalcalls": -1
+            }]
+        };
+
+        var options = {
+            url: config.restAPIUrl,
+            //  path: '/stats',
+            method: 'GET'
+        };
+
+        dependencies.request(options, function(err, response, body) {
+            logger.info('response.statusCode : ' + response.statusCode);
+            logger.info('response.statusMessage : ' + response.statusMessage);
+            //  logger.warn('response.body : ' + response.body  );
+
+            //  logger.info('body : ' + body.replace(/(\r\n|\n|\r)/gm,""));
+            //  logger.info('body : ' + body.replace(/\n/g,""));
+            //  logger.info('body : ' + body.replace(/\n/g,"").replace(/\s/g,""));
+            if (response.statusCode === 200) {
+                logger.info('body : ' + body);
+                jobCallback(null, {
+                    status: body,
+                    title: config.widgetTitle
+                });
+            } else {
+                logger.warn('body : ' + body);
+                logger.info('Dummy JSON Object status : ' + JSON.stringify(status));
+                jobCallback(null, {
+                    status: JSON.stringify(status),
+                    title: config.widgetTitle
+                });
+            }
         });
     }
 };

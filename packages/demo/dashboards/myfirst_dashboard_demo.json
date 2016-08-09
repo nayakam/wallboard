@@ -23,9 +23,9 @@
             "col": 6,
             "width": 10,
             "height": 4,
-            "widget": "linegraph",
-            "job": "sales-graph",
-            "config": "sales"
+            "widget": "line-chart",
+            "job": "generate-data",
+            "config": "chart-one-serie-legend"
         }, {
             "row": 4,
             "col": 1,
@@ -47,9 +47,9 @@
             "col": 6,
             "width": 10,
             "height": 5,
-            "widget": "linegraph",
-            "job": "sales-graph",
-            "config": "sales"
+            "widget": "line-chart",
+            "job": "generate-data",
+            "config": "chart-two-series-bar"
         }, {
             "row": 9,
             "col": 1,
@@ -95,22 +95,26 @@
         },
 
         "currentCall": {
-            "interval": 3000,
-            "widgetTitle": "Current Call Details"
+            "interval": 6000,
+            "widgetTitle": "Current Call Details",
+            "restAPIUrl": "http://127.0.0.1:5000/screenshot/api/v1.0/queuestats/Main_CSQ"
         },
 
         "totalCall": {
-            "interval": 3000,
-            "widgetTitle": "Total Call Details"
+            "interval": 6000,
+            "widgetTitle": "Total Call Details",
+            "restAPIUrl": "http://127.0.0.1:5000/screenshot/api/v1.0/queuestats/Main_CSQ"
         },
 
         "serviceLevel": {
-            "interval": 3000,
-            "widgetTitle": "Service Level Details"
+            "interval": 6000,
+            "widgetTitle": "Service Level Details",
+            "restAPIUrl": "http://127.0.0.1:5000/screenshot/api/v1.0/queuestats/Main_CSQ"
         },
 
         "quotes-famous": {
-            "interval": 6000,
+            "interval": 10000,
+            "restAPIUrl": "http://127.0.0.1:5000/screenshot/api/v1.0/queuestats/Main_CSQ",
             "widgetTitle": "Message From Team Manager",
             "quotes": [{
                 "quote": "It's not that I'm so smart, it's just that I stay with problems longer.",
@@ -146,11 +150,33 @@
         "sales": {
             "interval": 6000,
             "widgetTitle": "Monthly Sales",
-            "dataDisplay" : "soldToday"
+            "dataDisplay": "soldToday",
+            "restAPIUrl": "http://127.0.0.1:5000/screenshot/api/v1.0/queuestats/Main_CSQ"
+        },
+
+        "chart-one-serie-legend": {
+            "interval": 5000,
+            "widgetTitle": "Number of calls",
+            "restAPIUrl": "http://127.0.0.1:5000/screenshot/api/v1.0/queuestats/Main_CSQ",
+            "numberSeries": 1,
+            "xAxis": true,
+            "yAxis": true
+        },
+
+        "chart-two-series-bar": {
+            "interval": 5000,
+            "widgetTitle": "Agent Activity",
+            "restAPIUrl": "http://127.0.0.1:5000/screenshot/api/v1.0/queuestats/Main_CSQ",
+            "numberSeries": 2,
+            "chartType": "bar",
+            "xAxis": true,
+            "yAxis": true,
+            "items": 10
         },
 
         "datetime": {
             "interval": 1000,
+            "restAPIUrl": "http://127.0.0.1:5000/screenshot/api/v1.0/queuestats/Main_CSQ",
             "lang": "en"
         }
     }

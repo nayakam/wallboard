@@ -86,10 +86,46 @@ module.exports = {
      Have a look at test/totalCall for an example of how to unit tests this easily by mocking easyRequest calls
 
      */
+     status = {
+         "queue": [{
+             "abandonedcalls": -1,
+             "callswaiting": -1,
+             "dequeuedcalls": -1,
+             "id": 2,
+             "oldestwait": "0:00:00",
+             "qname": "Main_CSQ",
+             "totalcalls": -1
+         }]
+     };
 
-    dependencies.easyRequest.HTML('http://google.com', function (err, html) {
-      // logger.trace(html);
-      jobCallback(err, {title: config.widgetTitle, totalCall: '483'});
-    });
+     var options = {
+         url: config.restAPIUrl,
+         //  path: '/stats',
+         method: 'GET'
+     };
+
+     dependencies.request(options, function(err, response, body) {
+         logger.info('response.statusCode : ' + response.statusCode);
+         logger.info('response.statusMessage : ' + response.statusMessage);
+         //  logger.warn('response.body : ' + response.body  );
+
+         //  logger.info('body : ' + body.replace(/(\r\n|\n|\r)/gm,""));
+         //  logger.info('body : ' + body.replace(/\n/g,""));
+         //  logger.info('body : ' + body.replace(/\n/g,"").replace(/\s/g,""));
+         if (response.statusCode === 200) {
+             logger.info('body : ' + body);
+             jobCallback(null, {
+                 status: body,
+                 title: config.widgetTitle
+             });
+         } else {
+             logger.warn('body : ' + body);
+             logger.info('Dummy JSON Object status : ' + JSON.stringify(status));
+             jobCallback(null, {
+                 status: JSON.stringify(status),
+                 title: config.widgetTitle
+             });
+         }
+     });
   }
 };
