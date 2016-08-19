@@ -17,7 +17,7 @@
             "height": 3,
             "widget": "currentCall",
             "job": "currentCall",
-            "config": "currentCall"
+            "config": ["currentCall","rest-api"]
         }, {
             "row": 1,
             "col": 6,
@@ -25,7 +25,7 @@
             "height": 4,
             "widget": "line-chart",
             "job": "generate-data",
-            "config": "chart-one-serie-legend"
+            "config": ["chart-one-serie-legend","rest-api"]
         }, {
             "row": 4,
             "col": 1,
@@ -33,7 +33,7 @@
             "height": 3,
             "widget": "totalCall",
             "job": "totalCall",
-            "config": "totalCall"
+            "config": ["totalCall","rest-api"]
         }, {
             "row": 8,
             "col": 1,
@@ -41,7 +41,7 @@
             "height": 3,
             "widget": "serviceLevel",
             "job": "serviceLevel",
-            "config": "serviceLevel"
+            "config": ["serviceLevel","rest-api"]
         }, {
             "row": 5,
             "col": 6,
@@ -49,7 +49,7 @@
             "height": 5,
             "widget": "line-chart",
             "job": "generate-data",
-            "config": "chart-two-series-bar"
+            "config": ["chart-two-series-bar","rest-api"]
         }, {
             "row": 9,
             "col": 1,
@@ -57,7 +57,7 @@
             "height": 5,
             "widget": "quotes",
             "job": "quotes",
-            "config": "quotes-famous"
+            "config": ["quotes-famous","rest-api"]
         }, {
             "row": 9,
             "col": 13,
@@ -65,56 +65,27 @@
             "height": 5,
             "widget": "datetime",
             "job": "datetime",
-            "config": "datetime"
+            "config": ["datetime","rest-api"]
         }]
     },
 
     "config": {
 
-        "calendar-holidays": {
-            "interval": 60000,
-            "calendarUrl": "http://www.calendarlabs.com/templates/ical/Australia-Holidays.ics",
-            "maxEntries": 9,
-            "widgetTitle": "Upcoming US Holidays"
-        },
-
-        "issue-types": {
-            "interval": 60000,
-            "widgetTitle": "Issues Types in the Project",
-            "database": {
-                "host": "mydatabase.mycompany.com",
-                "port": 1000,
-                "database": "salesdb"
-            }
-        },
-
-        "picture": {
-            "interval": 60000,
-            "widgetTitle": "Nat Geo Picture of the Day",
-            "url": "http://photography.nationalgeographic.com/photography/photo-of-the-day"
-        },
-
         "currentCall": {
-            "interval": 6000,
-            "widgetTitle": "Current Call Details",
-            "restAPIUrl": "http://127.0.0.1:5000/screenshot/api/v1.0/queuestats/Main_CSQ"
+            "widgetTitle": "Current Call Details"
         },
 
         "totalCall": {
-            "interval": 6000,
-            "widgetTitle": "Total Call Details",
-            "restAPIUrl": "http://127.0.0.1:5000/screenshot/api/v1.0/queuestats/Main_CSQ"
+            "widgetTitle": "Total Call Details"
         },
 
         "serviceLevel": {
             "interval": 6000,
-            "widgetTitle": "Service Level Details",
-            "restAPIUrl": "http://127.0.0.1:5000/screenshot/api/v1.0/queuestats/Main_CSQ"
+            "widgetTitle": "Service Level Details"
         },
 
         "quotes-famous": {
             "interval": 10000,
-            "restAPIUrl": "http://127.0.0.1:5000/screenshot/api/v1.0/queuestats/Main_CSQ",
             "widgetTitle": "Message From Team Manager",
             "quotes": [{
                 "quote": "It's not that I'm so smart, it's just that I stay with problems longer.",
@@ -147,17 +118,9 @@
             "limit": 1
         },
 
-        "sales": {
-            "interval": 6000,
-            "widgetTitle": "Monthly Sales",
-            "dataDisplay": "soldToday",
-            "restAPIUrl": "http://127.0.0.1:5000/screenshot/api/v1.0/queuestats/Main_CSQ"
-        },
-
         "chart-one-serie-legend": {
             "interval": 5000,
             "widgetTitle": "Number of calls",
-            "restAPIUrl": "http://127.0.0.1:5000/screenshot/api/v1.0/queuestats/Main_CSQ",
             "numberSeries": 1,
             "xAxis": true,
             "yAxis": true
@@ -166,7 +129,6 @@
         "chart-two-series-bar": {
             "interval": 5000,
             "widgetTitle": "Agent Activity",
-            "restAPIUrl": "http://127.0.0.1:5000/screenshot/api/v1.0/queuestats/Main_CSQ",
             "numberSeries": 2,
             "chartType": "bar",
             "xAxis": true,
@@ -176,7 +138,6 @@
 
         "datetime": {
             "interval": 1000,
-            "restAPIUrl": "http://127.0.0.1:5000/screenshot/api/v1.0/queuestats/Main_CSQ",
             "lang": "en"
         }
     }
