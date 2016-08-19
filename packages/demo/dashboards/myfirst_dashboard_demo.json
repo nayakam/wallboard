@@ -72,16 +72,16 @@
     "config": {
 
         "currentCall": {
-            "widgetTitle": "Current Call Details"
+            "widgetTitle": " "
         },
 
         "totalCall": {
-            "widgetTitle": "Total Call Details"
+            "widgetTitle": " "
         },
 
         "serviceLevel": {
             "interval": 6000,
-            "widgetTitle": "Service Level Details"
+            "widgetTitle": " "
         },
 
         "quotes-famous": {

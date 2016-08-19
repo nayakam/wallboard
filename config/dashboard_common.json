@@ -3,6 +3,7 @@
         "rest-api": {
             "interval": 6000,
             "restAPIUrl": "http://101.166.88.246/screenshot/api/v1.0/queuestats/Main_CSQ",
+            "messageAPIUrl": "http://147.76.180.70/wallpost",
             "url": "http://localhost/api/v1",
             "path": "/"
         }
