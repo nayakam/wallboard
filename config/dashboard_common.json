@@ -1,7 +1,7 @@
 {
     "config": {
         "rest-api": {
-          "interval": 6000,
+            "interval": 6000,
             "restAPIUrl": "http://101.166.88.246/screenshot/api/v1.0/queuestats/Main_CSQ",
             "url": "http://localhost/api/v1",
             "path": "/"

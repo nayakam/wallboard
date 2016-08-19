@@ -17,7 +17,7 @@
             "height": 3,
             "widget": "currentCall",
             "job": "currentCall",
-            "config": ["currentCall","rest-api"]
+            "config": ["currentCall", "rest-api"]
         }, {
             "row": 1,
             "col": 6,
@@ -25,7 +25,7 @@
             "height": 4,
             "widget": "line-chart",
             "job": "generate-data",
-            "config": ["chart-one-serie-legend","rest-api"]
+            "config": ["chart-one-serie-legend", "rest-api"]
         }, {
             "row": 4,
             "col": 1,
@@ -33,7 +33,7 @@
             "height": 3,
             "widget": "totalCall",
             "job": "totalCall",
-            "config": ["totalCall","rest-api"]
+            "config": ["totalCall", "rest-api"]
         }, {
             "row": 8,
             "col": 1,
@@ -41,7 +41,7 @@
             "height": 3,
             "widget": "serviceLevel",
             "job": "serviceLevel",
-            "config": ["serviceLevel","rest-api"]
+            "config": ["serviceLevel", "rest-api"]
         }, {
             "row": 5,
             "col": 6,
@@ -49,7 +49,7 @@
             "height": 5,
             "widget": "line-chart",
             "job": "generate-data",
-            "config": ["chart-two-series-bar","rest-api"]
+            "config": ["chart-two-series-bar", "rest-api"]
         }, {
             "row": 9,
             "col": 1,
@@ -57,7 +57,7 @@
             "height": 5,
             "widget": "quotes",
             "job": "quotes",
-            "config": ["quotes-famous","rest-api"]
+            "config": ["quotes-famous", "rest-api"]
         }, {
             "row": 9,
             "col": 13,
@@ -65,7 +65,7 @@
             "height": 5,
             "widget": "datetime",
             "job": "datetime",
-            "config": ["datetime","rest-api"]
+            "config": ["datetime", "rest-api"]
         }]
     },
 
