@@ -1,6 +1,6 @@
 {
-    "title": "My first dashboard Demo",
-    "titleVisible": false,
+    "title": "Wallboard",
+    "titleVisible": true,
 
     "description": "DEMO",
 
@@ -80,13 +80,12 @@
         },
 
         "serviceLevel": {
-            "interval": 6000,
             "widgetTitle": " "
         },
 
         "quotes-famous": {
-            "interval": 10000,
-            "widgetTitle": "Message From Team Manager",
+            "interval": 60000,
+            "widgetTitle": " ",
             "quotes": [{
                 "quote": "It's not that I'm so smart, it's just that I stay with problems longer.",
                 "author": "Albert Einstein"
@@ -120,7 +119,7 @@
 
         "chart-one-serie-legend": {
             "interval": 5000,
-            "widgetTitle": "Number of calls",
+            "widgetTitle": " ",
             "numberSeries": 1,
             "xAxis": true,
             "yAxis": true
@@ -128,7 +127,7 @@
 
         "chart-two-series-bar": {
             "interval": 5000,
-            "widgetTitle": "Agent Activity",
+            "widgetTitle": " ",
             "numberSeries": 2,
             "chartType": "bar",
             "xAxis": true,
