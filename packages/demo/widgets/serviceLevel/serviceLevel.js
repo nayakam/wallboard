@@ -21,9 +21,9 @@ widget = {
                 console.log(" json.queue[0].qname : " + json.queue[0].qname);
                 console.log(" json.queue[0].totalcalls : " + json.queue[0].totalcalls);
                 if (json.queue[0].totalcalls > 0) {
-                  $('.content-serviceLevel', el).html(((json.queue[0].callshandled + json.queue[0].dequeuedcalls) / json.queue[0].totalcalls) * 100 + '%');                  
+                  $('.content-serviceLevel', el).html(((json.queue[0].callshandled + json.queue[0].dequeuedcalls) / json.queue[0].totalcalls) * 100 + '%');
                 } else {
-                    $('.content-serviceLevel', el).html('82%');
+                    $('.content-serviceLevel', el).html('0%');
                 }
             } else {
                 $('.content-serviceLevel', el).html('Data N/A');
