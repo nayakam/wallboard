@@ -1,2 +1,12 @@
-# screentshot, my awesome Atlasboard dashboard
-This is the README for my dashboard. Any info I need to pass on to other users will go here.
+# Wallboard
+Real time demo dashboard for call center.
+
+### Framework & Technology
+* node.js
+* atlasboard 
+* REST API
+
+
+### Sample Screen
+
+![alt tag](https://raw.githubusercontent.com/nayakam/wallboard/master/packages/demo/screenshot/Screenshot4.jpg)
